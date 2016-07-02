@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Earth Quake data corresponding with Magnitude</title>
+	</head>
+	<style>
+	h3 
+	{ 
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+	font-style: italic
+	}
+	</style>
+    <body>
+		<h3>Week wise Earth Quake data of Magnitude for 2</h3>
+		<table style="border: .5px solid black">
+			<thead>
+				<tr>
+					<th width="35%" style="background-color: #C2C2C2;">Week Number</th>
+					<th style="background-color: #C2C2C2;">Number of Earth Quakes Occurred in Week</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entry in magnitudeTwo %}
+				<tr>
+					<td >{{ entry['week'] }}</td>
+					<td >{{ entry['count'] }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<h3>Week wise Earth Quake data of magnitude for 3</h3>
+		<table style="border: .5px solid black">
+			<thead>
+				<tr>
+					<th width="35%" style="background-color: #C2C2C2;">Week Number</th>
+					<th style="background-color: #C2C2C2;">Number of Earth Quakes Occurred in Week</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entry in magnitudeThree %}
+				<tr>
+					<td >{{ entry['week'] }}</td>
+					<td >{{ entry['count'] }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<h3>Week wise Earth Quake data of magnitude for 4</h3>
+		<table style="border: .5px solid black">
+			<thead>
+				<tr>
+					<th width="35%" style="background-color: #C2C2C2;">Week Number</th>
+					<th style="background-color: #C2C2C2;">Number of Earth Quakes Occurred in Week </th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entry in magnitudeFour %}
+				<tr>
+					<td >{{ entry['week'] }}</td>
+					<td >{{ entry['count'] }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<h3>Week wise Earth Quake data of magnitude 5</h3>
+		<table style="border: .5px solid black">
+			<thead>
+				<tr>
+					<th width="35%" style="background-color: #C2C2C2;">Week Number</th>
+					<th style="background-color: #C2C2C2;">Number of Earth Quakes Occurred in Week</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entry in magnitudeFive%}
+				<tr>
+					<td >{{ entry['week'] }}</td>
+					<td >{{ entry['count'] }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<h3>Week wise Earth Quake data of magnitude greater than 5</h3>
+		<table style="border: .5px solid black">
+			<thead>
+				<tr>
+					<th width="35%" style="background-color: #C2C2C2;">Week Number</th>
+					<th style="background-color: #C2C2C2;">Number of Earth Quakes Occurred in Week</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entry in magnitudeGreaterFive %}
+				<tr>
+					<td >{{ entry['week'] }}</td>
+					<td >{{ entry['count'] }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<h4> Show places where earthquake was following magnitude</h4>
+		<form name="Gap" method="GET" action="/">  
+		<input type="text" name="mag" /> 		
+		<input type="submit" name="submit" value="Submit" />  
+		</form>
+	</body>
+</html>

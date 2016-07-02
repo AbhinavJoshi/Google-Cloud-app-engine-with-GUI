@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Earthquake Data!</title>
+  </head>
+  <body>
+    <body>
+      <table style="border: 1px solid black">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #C2C2C2; margin: 5px">Places</th>
+            
+          </tr>
+		  
+          {% for entry in magTwoEntries  %}
+             <tr>
+               <td>{{ entry['place'] }}</td>
+              
+             </tr>
+          {% endfor %}
+		  
+		 
+        </tbody>
+      </table>
+	  <br/>
+	  <br/>
+	  <br/>
+      <br /> 
+		</form>
+		</body>
+		</html>
+      </form>
+  </body>
+</html>
